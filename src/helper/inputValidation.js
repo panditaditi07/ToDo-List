@@ -5,7 +5,7 @@ export const isStringEmpty = (str) => {
     return true;
   }
 };
-console.log(isStringEmpty(""));
+
 export const isMarkup = (str) => {
   if (str.includes("<")) {
     return false;
@@ -13,7 +13,6 @@ export const isMarkup = (str) => {
     return true;
   }
 };
-// console.log(isMarkup("aditi"));
 export const isNumber = (str) => {
   const number = /^[0-9]+$/;
   if (str.match(number)) {
@@ -38,4 +37,3 @@ export const isInputValid = (str) => {
     return fun(str);
   });
 };
-console.log(isInputValid("aditi"));

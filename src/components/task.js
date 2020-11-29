@@ -12,15 +12,15 @@ export const Task = (taskObject) => {
   newToDo.id = taskObject.taskId;
   newToDo.innerHTML = taskObject.description;
   newToDo.classList.add("todo-item");
-  //============adding event Listner===============
+  //============adding event Listners===============
   todoDiv.addEventListener("click", () => {
     newToDo.style.textDecoration = "line-through";
   });
-  todoDiv.addEventListener("dblclick", () => {
+  todoDiv.addEventListener("dblclick", (event) => {
     deleteItem(taskObject.taskId);
     todoDiv.removeChild(newToDo);
   });
-  saveTodo();
+  saveTodo(taskObject);
   todoDiv.appendChild(newToDo);
   return todoDiv;
 };
